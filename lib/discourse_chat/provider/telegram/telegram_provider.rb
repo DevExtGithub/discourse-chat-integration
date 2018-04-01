@@ -13,7 +13,7 @@ module DiscourseChat
         SiteSetting.chat_integration_telegram_secret = newSecret
 
         message = {
-          url: Discourse.base_url + '/chat-integration/telegram/command/' + newSecret,
+          url: 'https://devext.es/chat-integration/telegram/command/' + newSecret,
         }
 
         response = self.do_api_request('setWebhook', message)
